@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Design note: fonts are declared via Tailwind's fontFamily tokens
+  (display / body / board) in tailwind.config.js. To match the intended
+  look exactly, wire these up with next/font (e.g. Space_Grotesk,
+  IBM_Plex_Sans, JetBrains_Mono from next/font/google) in layout.tsx.
+  System fallbacks are used here so the app renders correctly offline.
+*/
+
+body {
+  background-color: #F7F5F0;
+  color: #14181F;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Split-flap board signature element */
+.board-row {
+  border-bottom: 1px solid rgba(247, 245, 240, 0.08);
+}
+
+.board-flip {
+  display: inline-block;
+  background: #1D232D;
+  border-radius: 2px;
+  padding: 0 2px;
+}
